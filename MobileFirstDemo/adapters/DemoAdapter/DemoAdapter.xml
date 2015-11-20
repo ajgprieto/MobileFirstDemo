@@ -28,5 +28,6 @@
 	</connectivity>
 
     <procedure name="getAllCountries"></procedure>
+    <procedure name="search2charCountryCode"></procedure>
     
 </wl:adapter>

@@ -1,12 +1,33 @@
-<ion-view title="Demo">
-	<ion-content>
-		<button class="button button-block button-positive" on-tap="getAllCountries()">
-			Show Countries
-		</button>
-		<ion-list ng-repeat="country in countries">
-			<div class="item item-text-wrap">
-				{{ country.name }}
-			</div>
-		</ion-list>
-	</ion-content>
+<ion-view title="Country Search">
+</br>
+	<ion-tabs class="tabs-positive tabs-icon-only">
+		<ion-tab title="All Countries">
+			<ion-view>
+				<ion-content>
+					<button class="button button-block button-positive" on-tap="getAllCountries()">
+						Show Countries
+					</button>
+					<ion-list ng-repeat="country in countries">
+						<div class="item item-text-wrap">
+							{{ country.name }}
+						</div>
+					</ion-list>
+				</ion-content>
+			</ion-view>
+		</ion-tab>
+		<ion-tab title="Search">
+			<ion-view>
+				<ion-content>
+					<label class="item item-input">
+						<span class="input-label">2 Character Country Code</span>
+							<input type="text" ng-model="search.countryCode" maxLength="2">
+					</label>
+					<button class="button button-block button-positive" on-tap="searchByCountryCode2()">
+						Search Country
+					</button>
+						{{ result }}
+				</ion-content>
+			</ion-view>
+		</ion-tab>
+	</ion-tabs>
 </ion-view>
